@@ -8,6 +8,7 @@ import img4 from '../../assets/projects/project-4.png';
 import img5 from '../../assets/projects/project-5.png';
 import img6 from '../../assets/projects/project-6.png';
 import img7 from '../../assets/projects/project-7.png';
+import img8 from '../../assets/projects/project-8.png';
 
 function Portfolio({ mood }) {
     const sliderRef = useRef(null);
@@ -57,9 +58,9 @@ function Portfolio({ mood }) {
             image: img5,
             title: "Developer World",
             description: "Resource hub for developers community",
-            link: "https://dernounimk.github.io/khalil-web/",
+            link: "https://dernounimk.github.io/khlil-web-demo/",
             tags: ["HTML5", "CSS3", "JavaScript"],
-            github: "https://github.com/dernounimk/khalil-web"
+            github: "https://github.com/dernounimk/khlil-web-demo"
         },
         {
             id: 6,
@@ -78,6 +79,15 @@ function Portfolio({ mood }) {
             link: "https://dernounimk.github.io/mk-dev-demo/",
             tags: ["React", "CSS", "Framer Motion"],
             github: "https://github.com/dernounimk/mk-dev-demo"
+        },
+        {
+            id: 8,
+            image: img8,
+            title: "Handys",
+            description: "MERN stack social media platform for sharing posts and connecting between handymen",
+            link: "https://handys-dz.netlify.app/",
+            tags: ["React", "Express", "Node", "MongoDB"],
+            github: "https://github.com/dernounimk/HendyMasters"
         }
     ];
 
