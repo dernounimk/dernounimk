@@ -1,8 +1,41 @@
-# React + Vite
+# dernounimk - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source code of my personal portfolio website. This project showcases my work, skills, and journey as a developer. It is built with modern web technologies to ensure a fast, responsive, and interactive experience.
 
-Currently, two official plugins are available:
+🌐 **Live Site**: [dernounimk.vercel.app](https://dernounimk.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## ✨ Features
+
+- **Modern & Clean Design**: A professional layout to highlight projects and skills.
+- **Fully Responsive**: Optimized for all devices (desktop, tablet, mobile).
+- **High Performance**: Built with Vite for fast loading and Hot Module Replacement (HMR).
+- **Interactive UI**: Smooth animations and transitions.
+
+---
+
+## 🛠️ Technologies Used
+
+- **React** – JavaScript library for building user interfaces.
+- **Vite** – Next-generation frontend tooling for fast development.
+- **CSS** – Custom styling (50.2% of the project).
+- **JavaScript (ES6+)** – Core logic and interactivity (49.5%).
+- **ESLint** – Code linting for consistent quality.
+
+---
+
+## 🚀 How to Run Locally
+
+If you want to explore or modify the code, follow these steps.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (includes npm)
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/dernounimk/dernounimk.git
+   cd dernounimk
