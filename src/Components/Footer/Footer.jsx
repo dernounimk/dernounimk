@@ -144,27 +144,6 @@ function Footer({ mood }) {
                     ))}
                 </motion.ul>
 
-                {/* Optional email subscription */}
-                <motion.div 
-                    className="footer-subscription"
-                    variants={itemVariants}
-                >
-                    <p style={{ marginBottom: '1rem' }}>
-                        Subscribe to my newsletter for updates
-                    </p>
-                    <form className="subscription-form" onSubmit={(e) => e.preventDefault()}>
-                        <input 
-                            type="email"
-                            placeholder="Enter your email"
-                            className="subscription-input"
-                            required
-                        />
-                        <button type="submit" className="subscription-btn">
-                            Subscribe
-                        </button>
-                    </form>
-                </motion.div>
-
                 <motion.span 
                     variants={itemVariants}
                     initial={{ opacity: 0 }}

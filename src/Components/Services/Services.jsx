@@ -5,16 +5,8 @@ import './Services.css';
 function Services({ mood }) {
     const [activeModal, setActiveModal] = useState(null);
     const [hoveredCard, setHoveredCard] = useState(null);
-    const [scrollPosition, setScrollPosition] = useState(0);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrollPosition(window.scrollY);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    // إزالة scrollPosition و useEffect الخاص به
 
     const services = [
         {
@@ -65,17 +57,30 @@ function Services({ mood }) {
     ];
 
     const handleMore = (serviceId) => {
+        // حفظ موضع السكرول الحالي
+        const scrollY = window.scrollY;
+        
         setActiveModal(serviceId);
         document.body.style.overflow = 'hidden';
         document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollY}px`;
         document.body.style.width = '100%';
     };
 
     const handleClose = () => {
+        // استعادة موضع السكرول
+        const scrollY = document.body.style.top;
+        
         setActiveModal(null);
         document.body.style.overflow = 'auto';
         document.body.style.position = '';
+        document.body.style.top = '';
         document.body.style.width = '';
+        
+        // إعادة السكرول إلى الموضع السابق
+        if (scrollY) {
+            window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        }
     };
 
     const containerVariants = {
@@ -240,7 +245,7 @@ function Services({ mood }) {
                 ))}
             </motion.div>
 
-            {/* Modal */}
+            {/* Modal - تم إزالة style transform */}
             <AnimatePresence>
                 {activeModal && (
                     <motion.div 
@@ -263,9 +268,6 @@ function Services({ mood }) {
                                     animate="visible"
                                     exit="exit"
                                     onClick={(e) => e.stopPropagation()}
-                                    style={{
-                                        transform: `translateY(${scrollPosition}px)`
-                                    }}
                                 >
                                     {/* Modal Header */}
                                     <div className="modal-header">
